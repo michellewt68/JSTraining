@@ -17,14 +17,12 @@ fetch(allProducts)
     json.map((product)=>{
         let li=createNode("li")
         let img=createNode("img")
-        let span1=createNode("span")
-        let span2=createNode("span")
+        let span=createNode("span")
 
         img.setAttribute("width","200")
 
-        span1.innerHTML=`${product.title}`
         img.src=product.image;
-        span2.innerHTML=`Price: ${product.price}`
+        span.innerHTML=`<br>${product.title}<br> Price: ${product.price}`
 
         append(li,img)
         append(li,span)
